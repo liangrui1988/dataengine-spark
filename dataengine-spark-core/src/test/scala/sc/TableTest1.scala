@@ -1,6 +1,5 @@
 package sc
 
-import com.dataengine.spark.core.utils.ResourcesUtils
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql
 

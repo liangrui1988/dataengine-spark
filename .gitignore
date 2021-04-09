@@ -1,2 +1,12 @@
 *.class
 *.log
+/.idea/*
+/yarn_queue_info_csv/*
+/yarn_queue_info.csv/*
+/dataengine-spark-core/target/*
+/dataengine-spark-process/target/*
+/dataengine-spark-member/target/*
+/dataengine-spark.iml
+/dataengine-spark-core/dataengine-spark-core.iml
+/dataengine-spark-member/dataengine-spark-member.iml
+/dataengine-spark-process/dataengine-spark-process.iml
