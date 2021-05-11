@@ -86,9 +86,10 @@ object ReadYarnQueueInfo {
     resultDF.createOrReplaceTempView("result_tab")
     val resultDF2 = spark.sql(
       """
-        |select queueName  as `queueName(队列名)`,concat_ws('|', collect_set(busName)) as `busNames(业务组)`,
+        |select queueName  as `queueName(队列名)`,
         |max(capacity) `capacity(默认容量%)`,max(maximumCapacity) `maximumCapacity(最大容量%)`,
-        |max(priority) `priority(优先级)`
+        |max(priority) `priority(优先级)`,
+        |concat_ws('|', collect_set(busName)) as `busNames(业务组)`
         |from result_tab group by queueName
         |""".stripMargin)
     println("resultDF2 show=======")
